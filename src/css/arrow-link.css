@@ -1,0 +1,129 @@
+.arrow-link {
+  align-self: flex-start;
+  display: inline-flex;
+  color: white;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  border-radius: 0.6rem;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:focus-visible {
+    border-color: var(--primary-color);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: white;
+      border-color: white;
+
+      color: var(--text-color);
+
+      & .arrow-link__arrow {
+        border-color: rgba(176, 176, 176, 0.2);
+
+        & svg {
+          transform: translateX(0.5rem);
+        }
+      }
+    }
+  }
+}
+
+.arrow-link--filled-white {
+  background-color: white;
+  border-color: white;
+
+  color: var(--text-color);
+
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  & .arrow-link__arrow {
+    border-color: rgba(176, 176, 176, 0.2);
+  }
+}
+.arrow-link--filled-blue {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+
+  color: white;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  & .arrow-link__arrow {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+
+      color: white;
+      & .arrow-link__arrow {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+.arrow-link--filled-white[disabled] {
+  color: #b0b0b0;
+}
+
+.arrow-link__text {
+  padding: 2rem 4.5rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 130%;
+  font-family: var(--supply);
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  text-transform: uppercase;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    padding: 2rem 4rem;
+  }
+}
+
+.arrow-link__arrow {
+  height: 8rem;
+  width: 7rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-left: 1px solid rgb(255, 255, 255, 0.2);
+  transition: border-color 0.2s;
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    transition: transform 0.2s;
+  }
+
+  @media (--mobile) {
+    width: 4.5rem;
+    height: 6rem;
+
+    & svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}

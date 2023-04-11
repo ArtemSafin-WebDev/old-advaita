@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {{> meta }}
+    </head>
+
+    <body>
+        {{> loader }}
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                {{> header }}
+                <main class="page-main">
+                    {{> service-intro }}
+                    {{> service-image }}
+                    {{> service-trading }}
+                    {{> service-brokerage }}
+                    {{> service-finance }}
+                    {{> contact-form }}
+                </main>
+                {{> footer }}
+            </div>
+        </div>
+        {{> contact-form-success }}
+        <script type="module" src="/src/js/main.ts"></script>
+    </body>
+
+</html>

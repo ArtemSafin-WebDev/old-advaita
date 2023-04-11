@@ -1,0 +1,185 @@
+<div class="loader ">
+    <div class="loader__backplate">
+
+    </div>
+    <div class="loader__inner">
+        <div class="loader__name">
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 261'%3E%3Cpath fill='%23fcfcfc' fill-rule='evenodd' d='M0,261H29.6v-72.5H177.6v72.5h29.6V102.18L134.07,0h-60.94L0,102.18v158.82Zm29.6-101.5v-48.17L88.53,29h30.15l58.93,82.33v48.17H29.6Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 261'%3E%3Cpath fill='%23fcfcfc' fill-rule='evenodd' d='M.65,261H156.05c28.61,0,51.8-22.72,51.8-50.75V50.75c0-28.03-23.19-50.75-51.8-50.75H.65V261Zm29.6-29V29h125.8c12.26,0,22.2,9.74,22.2,21.75V210.25c0,12.01-9.94,21.75-22.2,21.75H30.25Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 261'%3E%3Cpath fill='%23fcfcfc' fill-rule='evenodd' d='M.27,0H29.86V149.67l58.93,82.33h30.15l58.92-82.33V0h29.6V158.82l-73.13,102.18h-60.94L.27,158.82V0Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 261'%3E%3Cpath fill='%23fcfcfc' fill-rule='evenodd' d='M0,261H29.6v-72.5H177.6v72.5h29.6V102.18L134.07,0h-60.94L0,102.18v158.82Zm29.6-101.5v-48.17L88.53,29h30.15l58.93,82.33v48.17H29.6Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 209 261'%3E%3Cpath fill='%23fcfcfc' d='M208.09,261v-29H119.29V29h88.8V0H.88V29H89.69V232H.88v29H208.09Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 261'%3E%3Cpath fill='%23fcfcfc' fill-rule='evenodd' d='M89.49,261h29.6V29h88.8V0H.69V29H89.49v232Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+            <div class="loader__name-letter">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 208 261'%3E%3Cpath fill='%23fcfcfc' fill-rule='evenodd' d='M0,261H29.6v-72.5H177.6v72.5h29.6V102.18L134.07,0h-60.94L0,102.18v158.82Zm29.6-101.5v-48.17L88.53,29h30.15l58.93,82.33v48.17H29.6Z' /%3E%3C/svg%3E"
+                    alt="" class="loader__name-letter-image enter">
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .no-scroll {
+        overflow-y: scroll;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .no-scroll body {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 400;
+        display: grid;
+        grid-template-columns:
+            [main-start] 1fr [content-start] minmax(0, var(--container-width, 0)) [content-end] 1fr [main-end];
+        grid-gap: var(--content-padding, 0);
+        color: white;
+
+    }
+
+    .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s, visibility 0s linear .4s;
+    }
+
+    .loader__backplate {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        background-color: #1f47f3;
+    }
+
+
+    .loader__backplate.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s, visibility 0s linear .4s;
+    }
+
+    .loader__inner {
+        grid-column-start: content-start;
+        grid-column-end: content-end;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+        margin-bottom: 4rem;
+        z-index: 2;
+    }
+
+    .loader__name {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 3rem;
+        transition: transform .7s ease-in-out;
+    }
+
+    .loader__name-letter {
+        width: 20rem;
+        overflow: hidden;
+    }
+
+    .loader__name-letter-image {
+        display: block;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .loader__name-letter-image.enter {
+        animation-name: letter-animation;
+        animation-iteration-count: infinite;
+        animation-duration: 1.8s;
+    }
+
+    .loader__name-letter-image.exit {
+
+        animation-play-state: paused;
+    }
+
+    @keyframes letter-animation {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        40% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+        60% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes ticker {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+
+    @media (max-width: 640px) {
+
+
+        .loader__inner {
+            margin-bottom: 3rem;
+        }
+
+        .loader__name {
+            gap: .8rem;
+        }
+
+        .loader__name-letter {
+            width: 4.3rem;
+        }
+    }
+</style>
+
+<script>
+    if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+    }
+</script>
+
+<script src="/js/loader.js" defer=""></script>

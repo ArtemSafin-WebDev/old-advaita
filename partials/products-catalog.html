@@ -1,0 +1,34 @@
+<section class="products-catalog">
+    <div class="products-catalog__content">
+        <div class="products-catalog__top-row">
+            <h1 class="products-catalog__main-heading">
+                products
+            </h1>
+            <h2 class="products-catalog__secondary-heading">
+                What makes<br>
+                our products better
+            </h2>
+            <div class="products-catalog__text">
+                Sourcing from the richest and most prolific mines in Central Asia and Africa, and utilizing an
+                established robust logistics network, we are able to secure top-quality minerals with high refinement
+                that is delivered with higher efficiencies, ensuring low cost.
+            </div>
+        </div>
+        <ul class="products-catalog__list">
+            {{#each products}}
+                <li class="products-catalog__list-item">
+                    <a href="#" class="products-catalog__card">
+                        <div class="products-catalog__card-image-container">
+                            <img src="{{ src }}" alt="" class="products-catalog__card-image">
+                        </div>
+                        <div class="products-catalog__card-content">
+                            <h3 class="products-catalog__card-title">
+                                {{ title }}
+                            </h3>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

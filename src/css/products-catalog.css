@@ -1,0 +1,210 @@
+.products-catalog {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+
+  @media (--mobile) {
+    padding-top: 7rem;
+    padding-bottom: 5.6rem;
+    overflow: hidden;
+  }
+}
+
+.products-catalog__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+}
+
+.products-catalog__top-row {
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1rem;
+    grid-row: 3.4rem;
+    align-items: flex-start;
+    margin-bottom: 14rem;
+  }
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+}
+
+.products-catalog__main-heading {
+  grid-column: 1 / -1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33.7rem;
+  line-height: 90%;
+  text-transform: uppercase;
+  font-family: var(--supply);
+  color: var(--primary-color);
+  text-align: center;
+  user-select: none;
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.6rem;
+    line-height: 100%;
+    margin-bottom: 3rem;
+    font-size: 18.5vw;
+  }
+}
+
+.products-catalog__secondary-heading {
+  grid-column: 1 / 2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.2rem;
+  font-family: var(--supply);
+  line-height: 106%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    grid-column: 1 / -1;
+  }
+}
+
+.products-catalog__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  grid-column: 2 / 3;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    grid-column: 1 / -1;
+  }
+}
+
+.products-catalog__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 1rem;
+  grid-row-gap: 6rem;
+
+  @media (--mobile) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0.6rem;
+    grid-row-gap: 3rem;
+  }
+}
+
+.products-catalog__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-catalog__card {
+  transition: color 0.2s;
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color);
+      & .products-catalog__card-image {
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+
+.products-catalog__card-image-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+
+  @media (--desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  @media (--mobile) {
+    overflow: hidden;
+    margin: 0 -1.6rem;
+  }
+}
+
+.products-catalog__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s;
+
+  @media (--mobile) {
+    /* transform: scale(1.4); */
+  }
+}
+
+.products-catalog__card-content {
+  @media (--desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 6.4rem;
+  }
+
+  @media (--mobile) {
+    margin-top: -4rem;
+  }
+}
+
+.products-catalog__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: var(--supply);
+  line-height: 130%;
+  text-transform: uppercase;
+  text-align: center;
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+  }
+}
+
+.products-catalog__not-found {
+  font-family: var(--supply);
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-top: 2rem;
+  color: var(--primary-color);
+}

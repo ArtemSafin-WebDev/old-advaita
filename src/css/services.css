@@ -1,0 +1,210 @@
+.services {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  color: white;
+
+  @media (--desktop) {
+    min-height: min(100vh, 120rem);
+  }
+}
+
+.services__bg {
+  grid-column-start: main-start;
+  grid-column-end: main-end;
+  grid-row: 1 / 2;
+  position: relative;
+  background-color: rgb(22, 22, 22);
+}
+
+.services__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  mask-image: url("../mask.svg");
+  mask-position: 50% 50%;
+  mask-size: auto 50%;
+  mask-repeat: no-repeat;
+
+  @media (orientation: portrait) {
+    animation-name: services-mask;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+    animation-play-state: paused;
+  }
+}
+
+.services__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  grid-row: 1 / 2;
+  z-index: 1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  opacity: 0;
+  visibility: hidden;
+
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1rem;
+    align-self: center;
+  }
+
+  @media (orientation: portrait) {
+    animation-name: services-fade-in;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-play-state: paused;
+  }
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+@media (orientation: portrait) {
+  .services.revealed {
+    & .services__content,
+    & .services__bg-image {
+      animation-play-state: running;
+    }
+  }
+}
+
+.services__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20rem;
+  line-height: 90%;
+  text-transform: uppercase;
+  font-family: var(--supply);
+  grid-column: 1 / -1;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.6rem;
+    line-height: 100%;
+    order: -1;
+  }
+}
+
+.services__info {
+  grid-column: 3 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @media (--mobile) {
+    gap: 3rem;
+  }
+}
+
+.services__info-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 4.2rem;
+  counter-reset: ordered-list;
+
+  @media (--mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.services__info-list-item {
+  counter-increment: ordered-list;
+
+  @media (--mobile) {
+    &:nth-child(3n + 1) {
+      justify-self: flex-start;
+    }
+    &:nth-child(3n + 2) {
+      justify-self: center;
+    }
+    &:nth-child(3n + 3) {
+      justify-self: flex-end;
+    }
+  }
+}
+
+.services__info-card {
+  display: flex;
+  flex-direction: column;
+
+  @media (--desktop) {
+    &::before {
+      content: counter(ordered-list, decimal-leading-zero);
+      display: block;
+      padding-bottom: 3rem;
+      margin-bottom: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2.2rem;
+      line-height: 130%;
+      text-transform: uppercase;
+      font-family: var(--supply);
+      border-bottom: 1px dashed #b0b0b0;
+    }
+  }
+}
+
+.services__info-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 130%;
+  text-transform: uppercase;
+  font-family: var(--supply);
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+}
+
+.services__info-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+
+.services__info-link {
+  align-self: flex-start;
+
+  @media (--mobile) {
+    background-color: #fff;
+    color: var(--text-color);
+    &:link,
+    &:visited {
+      color: var(--text-color);
+    }
+
+    & .arrow-link__arrow {
+      border-color: #f1f1f1;
+    }
+  }
+}

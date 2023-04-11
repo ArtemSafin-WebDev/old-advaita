@@ -1,0 +1,45 @@
+<section class="partners js-reveal-block">
+    <div class="partners__content">
+        <div class="partners__top-row">
+            <div class="partners__left-col">
+                <div class="partners__text">
+                    With Advaita, our client base benefits from our overall operations. Our large trading volumes
+                    reaching over 2m metric tonnes of materials yearly, combined with our specialist in-market knowledge
+                    enable our customers regardless of size to benefit from volume savings that are unparalleled in the
+                    market.
+                </div>
+            </div>
+            <div class="partners__right-col">
+                <h2 class="partners__heading">
+                    Customers<br> partners&nbsp;<i>and</i>
+                </h2>
+            </div>
+        </div>
+        <div class="partners__slider js-partners-slider">
+            <div class="swiper">
+                <ul class="swiper-wrapper partners__list">
+                    {{#each partners}}
+                        <li class="swiper-slide partners__list-item">
+                            <div class="partners__slider-card">
+                                <div class="partners__slider-card-image-container">
+                                    <img src="{{ src }}" alt="" class="partners__slider-card-image">
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="partners__bottom-row">
+            <div class="partners__circles">
+                <svg width="31" height="47" viewBox="0 0 31 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.2" cx="15.5" cy="15.5" r="15.5" fill="#9F9F9F" />
+                    <circle cx="15.5" cy="31.5" r="15.25" stroke="#353535" stroke-width="0.5" stroke-dasharray="2 2" />
+                </svg>
+            </div>
+            <h3 class="partners__slogan">
+                Partnering with Advaita is a lucrative opportunity to establish mutual benefit and collaborative growth
+            </h3>
+        </div>
+    </div>
+</section>

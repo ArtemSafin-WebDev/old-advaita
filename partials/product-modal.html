@@ -1,0 +1,116 @@
+<div class="product-modal">
+    <div class="product-modal__inner">
+        <div class="product-modal__sidebar">
+            <div class="product-modal__slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {{#each products}}
+                            <div class="swiper-slide">
+                                <a href="#" class="product-modal__slider-card">
+                                    <div class="product-modal__slider-card-image-container">
+                                        <img src="{{ src }}" alt="" class="product-modal__slider-card-image">
+                                    </div>
+                                    <div class="product-modal__slider-card-content">
+                                        <h4 class="product-modal__slider-card-title">
+                                            {{ title }}
+                                        </h4>
+                                    </div>
+                                </a>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-modal__main">
+            <button class="product-modal__close">
+                close
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </button>
+            <div class="product-modal__content">
+                <div class="product-modal__row">
+                    <div class="product-modal__left-col">
+                        <h2 class="product-modal__heading">
+                            Enamelled Wire
+                        </h2>
+                        <div class="product-modal__main-image-wrapper">
+                            <img src="/product-large.webp" alt="" class="product-modal__main-image">
+                        </div>
+                    </div>
+                    <div class="product-modal__right-col">
+                        <div class="product-modal__text-content">
+                            <h3>
+                                DESCRIPTION:
+                            </h3>
+                            <p>
+                                Platinum-Palladium Sludge is produced in the precious metal units of copper-smelting
+                                factories, The product has a dark colour and comes in the form of powder. Chemical
+                                composition; up to 30%
+                            </p>
+                            <h3>
+                                USAGE:
+                            </h3>
+                            <p>
+                                Used for further processing to extract precious, non-ferrous and rare earth metals.
+                            </p>
+                            <h3>
+                                OTHER:
+                            </h3>
+                            <p>
+                                Packaging - can be packaged in a way that protects from the negative effects of
+                                precipitation, if agreed in the sales contract. Processed with a special substance which
+                                protects the surface from oxidation when shipped without packaging.
+                            </p>
+                            <p>
+                                Coils of wire rods are solidly tied with steel tape at least in two places in a way that
+                                prevents dispersal and distortion of cable coils during transportation.
+                            </p>
+                            <p>
+                                Coils are placed on special wooden pallets, protecting the wire rod from damage during
+                                loading, unloading and transportation.
+                            </p>
+                            <p>
+                                Transportation - by railway in covered wagons/containers or by auto transport.
+                            </p>
+                        </div>
+                        <ul class="product-modal__info-list">
+                            <li class="product-modal__info-list-item">
+                                <div class="product-modal__info-card">
+                                    <h3 class="product-modal__info-card-title">
+                                        DESCRIPTION:
+                                    </h3>
+                                    <div class="product-modal__info-card-text">
+                                        ST RK 933–92–Ingots and
+                                        ST RK 2289–2013 - Granules
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-modal__info-list-item">
+                                <div class="product-modal__info-card">
+                                    <h3 class="product-modal__info-card-title">
+                                        STANDARD:
+                                    </h3>
+                                    <div class="product-modal__info-card-text">
+                                        СРА-1
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="arrow-link arrow-link--filled-blue product-modal__link">
+                            <div class="arrow-link__text">
+                                DOWNLOAD PDF
+                            </div>
+                            <div class="arrow-link__arrow">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

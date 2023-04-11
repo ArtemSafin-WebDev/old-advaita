@@ -1,0 +1,12 @@
+:root {
+  --container-width: 162rem;
+  --content-padding: 3rem;
+  --primary-color: #1f47f3;
+  --text-color: #353535;
+  --supply: "Supply", sans-serif;
+  --arial: "Arial", sans-serif;
+
+  @media (--mobile) {
+    --content-padding: 2rem;
+  }
+}

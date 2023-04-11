@@ -1,0 +1,38 @@
+{
+  "name": "advaita",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/postcss-preset-env": "^7.7.0",
+    "fast-glob": "^3.2.12",
+    "glob": "^8.1.0",
+    "postcss-preset-env": "^7.8.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "browserslist": [
+    "> 1.5%, not dead"
+  ],
+  "dependencies": {
+    "@lottiefiles/lottie-player": "^1.6.3",
+    "@types/body-scroll-lock": "^3.1.0",
+    "@types/validator": "^13.7.11",
+    "axios": "^1.2.5",
+    "body-scroll-lock": "^3.1.5",
+    "css-animation-sync": "^0.5.0",
+    "detect-it": "^4.0.1",
+    "gsap": "^3.11.4",
+    "swiper": "^8.4.6",
+    "validator": "^13.7.0"
+  }
+}

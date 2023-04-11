@@ -1,0 +1,22 @@
+.service-image {
+  margin-bottom: 15rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 6;
+  position: relative;
+  background-color: blue;
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.service-image__image {
+  display: block;
+  width: 120%;
+  height: 120%;
+  max-width: none;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1.05);
+  position: absolute;
+  object-fit: cover;
+}

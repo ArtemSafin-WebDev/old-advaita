@@ -1,0 +1,59 @@
+<section class="products js-reveal-block">
+    <div class="products__content">
+        <div class="products__top-row">
+            <h2 class="products__heading">
+                Our<br> products
+            </h2>
+            <div class="products__slogan"> What makes
+                our products better:</div>
+            <div class="products__text">
+                Sourcing from the richest and most prolific mines in Central Asia and Africa, and utilizing an
+                established robust logistics network, we are able to secure top-quality minerals with high refinement
+                that is delivered with higher efficiencies, ensuring low cost.
+            </div>
+        </div>
+        <div class="products__slider js-products-slider">
+            <div class="swiper">
+                <ul class="swiper-wrapper products__list">
+                    {{#each products}}
+                        <li class="swiper-slide products__list-item">
+                            <a href="#" class="products__card">
+                                <div class="products__card-image-container">
+
+                                    <img src="{{ src }}" alt="" class="products__card-image" loading="lazy">
+
+                                </div>
+                                <div class="products__card-content">
+                                    <h3 class="products__card-title">
+                                        {{ title }}
+                                    </h3>
+                                </div>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <a href="#" class="products__show-more">
+                <div class="products__show-more-image-container">
+                    <img src="/products/show-more.webp" alt="" class="products__show-more-image">
+                </div>
+                <div class="products__show-more-content">
+                    <h3 class="products__show-more-title">
+                        25 products<br>
+                        in our catalog
+                    </h3>
+                    <div class="arrow-link products__show-more-link">
+                        <div class="arrow-link__text">
+                            view MORE
+                        </div>
+                        <div class="arrow-link__arrow">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
